@@ -18,7 +18,7 @@ public class Fragment2 extends Fragment {
 
     OnDataSend dataSend;
 
-    // Interface لإرسال البيانات للـ Activity
+
     public interface OnDataSend {
         void onSendData(String name);
     }
@@ -39,16 +39,16 @@ public class Fragment2 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_2, container, false);
 
-        // ربط العناصر
+
         etName = view.findViewById(R.id.etName);
         etEmail = view.findViewById(R.id.etEmail);
         btnContinue = view.findViewById(R.id.btnContinue);
 
-        // عند الضغط على الزر
+
         btnContinue.setOnClickListener(v -> {
             String name = etName.getText().toString();
 
-            // إرسال الاسم للـ Activity
+
             dataSend.onSendData(name);
         });
 

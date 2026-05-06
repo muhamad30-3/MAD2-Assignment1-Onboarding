@@ -8,7 +8,7 @@
     android:padding="24dp"
     tools:context=".Fragment2">
 
-    <!-- عنوان -->
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="20dp"/>
 
-    <!-- الاسم -->
+
     <EditText
         android:id="@+id/etName"
         android:layout_width="match_parent"
@@ -26,7 +26,6 @@
         android:inputType="textPersonName"
         android:layout_marginBottom="15dp"/>
 
-    <!-- الإيميل -->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
@@ -35,7 +34,7 @@
         android:inputType="textEmailAddress"
         android:layout_marginBottom="20dp"/>
 
-    <!-- زر Continue -->
+
     <Button
         android:id="@+id/btnContinue"
         android:layout_width="match_parent"

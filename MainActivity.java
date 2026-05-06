@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // EdgeToEdge (نفس كودك)
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity
             return insets;
         });
 
-        // تحميل Fragment2 أول ما يفتح التطبيق
+
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    // استقبال الاسم من Fragment2
+
     @Override
     public void onSendData(String name) {
 
@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity
                 .commit();
     }
 
-    // Interface تبع Fragment3
+
     @Override
     public void onCheckChanged(boolean isChecked) {
-        // ممكن تستخدمها لاحقاً (مش مطلوب حالياً)
+
     }
 }

@@ -21,7 +21,7 @@ public class Fragment3 extends Fragment {
 
     OnCheckboxChange checkboxChange;
 
-    // Interface (مطلوب في الأسايمنت)
+
     public interface OnCheckboxChange {
         void onCheckChanged(boolean isChecked);
     }
@@ -42,24 +42,21 @@ public class Fragment3 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_3, container, false);
 
-        // ربط العناصر
+
         tvName = view.findViewById(R.id.tvName);
         checkBox = view.findViewById(R.id.checkBox);
         btnFinish = view.findViewById(R.id.btnFinish);
 
-        // عرض الاسم القادم من Fragment2
+
         if (getArguments() != null) {
             String name = getArguments().getString("name");
             tvName.setText("Welcome " + name);
         }
 
-        // الزر بالبداية disabled
         btnFinish.setEnabled(false);
 
-        // التحكم بالـ CheckBox
         checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
 
-            // إرسال الحالة للـ Activity
             checkboxChange.onCheckChanged(isChecked);
 
             if (isChecked) {
@@ -71,7 +68,6 @@ public class Fragment3 extends Fragment {
             }
         });
 
-        // عند الضغط على Finish
         btnFinish.setOnClickListener(v -> {
             Toast.makeText(getContext(), "Finished ✅", Toast.LENGTH_SHORT).show();
         });
