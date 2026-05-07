@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager()
                 .beginTransaction()
                 .setCustomAnimations(
-                        android.R.anim.slide_in_left,   // دخول Fragment3
-                        android.R.anim.slide_out_right  // خروج Fragment2
+                        android.R.anim.slide_in_left,   
+                        android.R.anim.slide_out_right  
                 )
                 .replace(R.id.fragment_container, fragment3)
                 .commit();
